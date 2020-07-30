@@ -4,13 +4,15 @@
 
 .navbar-search {
     .input-group {
-        border-radius: $navbar-search-border-radius;
-        border: $navbar-search-border-width solid;
+        // border-radius: $navbar-search-border-radius;
+        // border: $navbar-search-border-width solid;
         background-color: transparent;
+        color: $gray-600;
 
         .input-group-text {
             background-color: transparent;
             padding-left: 1rem;
+            color: $gray-600;
         }
     }
 
@@ -22,18 +24,23 @@
 
 .navbar-search-dark {
     .input-group {
-        border-color: $navbar-search-dark-border-color;
+        // border-color: $navbar-search-dark-border-color;
+        color: $gray-600;
     }
 
     .input-group-text {
-        color: $navbar-search-dark-color;
+        // color: $navbar-search-dark-color;
+
+        color: $gray-600;
     }
 
     .form-control {
-        color: $navbar-search-dark-focus-color;
+        // color: $navbar-search-dark-focus-color;
+        color: $gray-600;
 
         &::placeholder {
-            color: $navbar-search-dark-color;
+            // color: $navbar-search-dark-color;
+            color: $gray-600;
         }
     }
 

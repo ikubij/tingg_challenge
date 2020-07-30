@@ -1,5 +1,5 @@
 <template>
-    <li class="nav-item">
+    <li class="nav-item mb-4">
         <router-link
                 :to="link.path"
                 @click.native="linkClick"

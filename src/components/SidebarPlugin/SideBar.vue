@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main" style="border-bottom-right-radius: 50px; box-shadow: 1px 1px 4px 0px #888 !important; z-index:2 ">
         <div class="container-fluid">
 
             <!--Toggler-->
@@ -60,7 +60,7 @@
                 </ul>
             </slot>
             <slot></slot>
-            <div v-show="$sidebar.showSidebar" class="navbar-collapse collapse show" id="sidenav-collapse-main">
+            <div v-show="$sidebar.showSidebar" class="navbar-collapse collapse show" id="sidenav-collapse-main" style="overflow:hidden;">
 
                 <div class="navbar-collapse-header d-md-none">
                     <div class="row">
@@ -78,32 +78,28 @@
                 <ul class="navbar-nav">
                     <slot name="links">
                     </slot>
+                    <div class="row" style="overflow:hidden">
+                      <div class="col-4">
+                        <div 
+                          class="mt-2 ml-3 pt-1 d-flex align-content-center justify-content-center"
+                          style="width:3.1rem; height:2rem; box-shadow: 1px 1px 4px 1px #888;background-color: white; border-radius:0.3rem"
+                        >
+                            <img 
+                              src="img/brand/dstv.png"
+                              style="width:3rem; height:1.5rem;"
+                            />
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <b class="text-sm text-bold">DStv</b><br/>
+                        <span class="text-sm">info@dstv.com</span>
+                      </div>
+                    </div>
                 </ul>
                 <!--Divider-->
-                <hr class="my-3">
-                <!--Heading-->
-                <h6 class="navbar-heading text-muted">Documentation</h6>
-                <!--Navigation-->
-                <ul class="navbar-nav mb-md-3">
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="https://demos.creative-tim.com/vue-argon-dashboard/documentation">
-                            <i class="ni ni-spaceship"></i> Getting started
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="https://demos.creative-tim.com/vue-argon-dashboard/documentation/foundation/colors.html">
-                            <i class="ni ni-palette"></i> Foundation
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="https://demos.creative-tim.com/vue-argon-dashboard/documentation/components/alerts.html">
-                            <i class="ni ni-ui-04"></i> Components
-                        </a>
-                    </li>
-                </ul>
+                <!-- <hr class="my-3"> -->
+
+                
             </div>
             </div>
     </nav>

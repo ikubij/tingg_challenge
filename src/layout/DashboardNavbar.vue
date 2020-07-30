@@ -2,55 +2,51 @@
     <base-nav class="navbar-top navbar-dark"
               id="navbar-main"
               :show-toggle-button="false"
-              expand>
-        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+              expand
+              style="background:white"
+              >
+        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ">
             <div class="form-group mb-0">
-                <base-input placeholder="Search"
+                <base-input placeholder="Search for contact lists/groups"
                             class="input-group-alternative"
                             alternative=""
-                            addon-right-icon="fas fa-search">
+                            addon-left-icon="fas fa-search"
+                            style="box-shadow:none !important"
+                            >
                 </base-input>
             </div>
         </form>
-        <ul class="navbar-nav align-items-center d-none d-md-flex">
+        <ul class="navbar-nav align-items-center d-none d-md-flex ml-lg-auto">
             <li class="nav-item dropdown">
-                <base-dropdown class="nav-link pr-0">
-                    <div class="media align-items-center" slot="title">
-                <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="img/theme/team-4-800x800.jpg">
-                </span>
-                        <div class="media-body ml-2 d-none d-lg-block">
-                            <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
-                        </div>
-                    </div>
+                <base-dropdown class="nav-item" position="right" style="border-right:0.01em grey solid; border-left:0.01em grey solid">
+                    <a slot="title" class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="ni ni-bell-55 text-gray"></i>
+                    </a>
 
-                    <template>
-                        <div class=" dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">Welcome!</h6>
-                        </div>
-                        <router-link to="/profile" class="dropdown-item">
-                            <i class="ni ni-single-02"></i>
-                            <span>My profile</span>
-                        </router-link>
-                        <router-link to="/profile" class="dropdown-item">
-                            <i class="ni ni-settings-gear-65"></i>
-                            <span>Settings</span>
-                        </router-link>
-                        <router-link to="/profile" class="dropdown-item">
-                            <i class="ni ni-calendar-grid-58"></i>
-                            <span>Activity</span>
-                        </router-link>
-                        <router-link to="/profile" class="dropdown-item">
-                            <i class="ni ni-support-16"></i>
-                            <span>Support</span>
-                        </router-link>
-                        <div class="dropdown-divider"></div>
-                        <router-link to="/profile" class="dropdown-item">
-                            <i class="ni ni-user-run"></i>
-                            <span>Logout</span>
-                        </router-link>
-                    </template>
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
                 </base-dropdown>
+
+                <base-dropdown class="nav-item" position="right">
+                    <a slot="title" class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="ni ni-bell-55 text-gray"></i>
+                    </a>
+
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" >Something else here</a>
+                </base-dropdown>
+
+                <a href="#">
+                  <span  class="text-teal"> Log out </span>
+                  <i class="fa fa-power-off text-gray"></i>
+                </a>
+
             </li>
         </ul>
     </base-nav>

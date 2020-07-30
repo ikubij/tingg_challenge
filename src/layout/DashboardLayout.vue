@@ -14,12 +14,12 @@
           }"
         />
 
-        <sidebar-item :link="{name: 'Messages', icon: 'ni ni-planet text-black', path: '/icons'}"/>
-        <sidebar-item :link="{name: 'Contacts', icon: 'ni ni-pin-3 text-black', path: '/maps'}"/>
-        <sidebar-item :link="{name: 'Accounts', icon: 'ni ni-single-02 text-black', path: '/profile'}"/>
-        <sidebar-item :link="{name: 'Credits', icon: 'ni ni-bullet-list-67 text-black', path: '/tables'}"/>
-        <sidebar-item :link="{name: 'Reports', icon: 'ni ni-key-25 text-black', path: '/login'}"/>
-        <sidebar-item :link="{name: 'Contact Us', icon: 'ni ni-circle-08 text-black', path: '/register'}"/>
+        <sidebar-item :link="{name: 'Messages', icon: 'ni ni-planet text-black', path: '/messages'}"/>
+        <sidebar-item :link="{name: 'Contacts', icon: 'ni ni-pin-3 text-black', path: '/'}"/>
+        <sidebar-item :link="{name: 'Accounts', icon: 'ni ni-single-02 text-black', path: '/'}"/>
+        <sidebar-item :link="{name: 'Credits', icon: 'ni ni-bullet-list-67 text-black', path: '/'}"/>
+        <sidebar-item :link="{name: 'Reports', icon: 'ni ni-key-25 text-black', path: '/'}"/>
+        <sidebar-item :link="{name: 'Contact Us', icon: 'ni ni-circle-08 text-black', path: '/'}"/>
 
       </template>
     </side-bar>
