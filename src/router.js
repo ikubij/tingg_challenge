@@ -22,6 +22,10 @@ export default new Router({
           component: () => import(/* webpackChunkName: "demo" */ './views/Dashboard.vue')
         },
         {
+          path: '/dashboard2',
+          component: () => import(/* webpackChunkName: "demo" */ './views/Dashboard2.vue')
+        },
+        {
           path: '/messages',
           // name: 'icons',
           component: () => import(/* webpackChunkName: "demo" */ './views/Messages.vue')

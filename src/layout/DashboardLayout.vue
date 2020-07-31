@@ -14,12 +14,12 @@
           }"
         />
 
-        <sidebar-item :link="{name: 'Messages', icon: 'ni ni-planet text-black', path: '/messages'}"/>
-        <sidebar-item :link="{name: 'Contacts', icon: 'ni ni-pin-3 text-black', path: '/'}"/>
-        <sidebar-item :link="{name: 'Accounts', icon: 'ni ni-single-02 text-black', path: '/'}"/>
-        <sidebar-item :link="{name: 'Credits', icon: 'ni ni-bullet-list-67 text-black', path: '/'}"/>
-        <sidebar-item :link="{name: 'Reports', icon: 'ni ni-key-25 text-black', path: '/'}"/>
-        <sidebar-item :link="{name: 'Contact Us', icon: 'ni ni-circle-08 text-black', path: '/'}"/>
+        <sidebar-item :link="{name: 'Messages', icon: 'fa fa-envelope-open text-black', path: '/messages'}"/>
+        <sidebar-item :link="{name: 'Contacts', icon: 'fa fa-users text-black', path: '/dashboard2'}"/>
+        <sidebar-item :link="{name: 'Accounts', icon: 'fa fa-folder text-black', path: '/'}"/>
+        <sidebar-item :link="{name: 'Credits', icon: 'fa fa-wallet text-black', path: '/'}"/>
+        <sidebar-item :link="{name: 'Reports', icon: 'fa fa-signal text-black', path: '/'}"/>
+        <sidebar-item :link="{name: 'Contact Us', icon: 'fa fa-at text-black', path: '/'}"/>
 
       </template>
     </side-bar>
@@ -31,20 +31,20 @@
           <!-- your content here -->
           <router-view></router-view>
         </fade-transition>
-        <content-footer v-if="!$route.meta.hideFooter"></content-footer>
+        <!-- <content-footer v-if="!$route.meta.hideFooter"></content-footer> -->
       </div>
     </div>
   </div>
 </template>
 <script>
   import DashboardNavbar from './DashboardNavbar.vue';
-  import ContentFooter from './ContentFooter.vue';
+  // import ContentFooter from './ContentFooter.vue';
   import { FadeTransition } from 'vue2-transitions';
 
   export default {
     components: {
       DashboardNavbar,
-      ContentFooter,
+      // ContentFooter,
       FadeTransition
     },
     data() {

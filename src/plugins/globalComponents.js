@@ -14,6 +14,8 @@ import BaseTable from "../components/BaseTable";
 import BaseHeader from "../components/BaseHeader";
 import Card from "../components/Card";
 import StatsCard from "../components/StatsCard";
+import LargeCard from "../components/LargeCard";
+import MediumCard from "../components/MediumCard";
 import Modal from "../components/Modal";
 import TabPane from "../components/Tabs/TabPane";
 import Tabs from "../components/Tabs/Tabs";
@@ -36,6 +38,8 @@ export default {
     Vue.component(BaseHeader.name, BaseHeader);
     Vue.component(Card.name, Card);
     Vue.component(StatsCard.name, StatsCard);
+    Vue.component(LargeCard.name, LargeCard);
+    Vue.component(MediumCard.name, MediumCard);
     Vue.component(Modal.name, Modal);
     Vue.component(TabPane.name, TabPane);
     Vue.component(Tabs.name, Tabs);

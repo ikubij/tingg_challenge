@@ -81,11 +81,13 @@ $yellow_cellulant:  #F7B747 !default;
 $green:   #2dce89 !default;
 $teal:    #11cdef !default;
 $teal_cellulant:    #22B0E5 !default;
+$light_blue_cellulant:    #e8f2fc !default;
 $cyan:    #2bffc6 !default;
 
 $colors: () !default;
 $colors: map-merge((
   "blue":       $blue,
+  "light_blue":       $light_blue_cellulant,
   "indigo":     $indigo_cellulant,
   "purple":     $purple,
   "pink":       $pink,

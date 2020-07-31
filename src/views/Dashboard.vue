@@ -1,142 +1,100 @@
 <template>
     <div>
-        <base-header type="gradient-success" class="pb-6 pb-8 pt-5 pt-md-8">
+        <div class="container-fluid pt-7">
+          <h2 class="text-black">Welcome Alice Wambui</h2>
+          <span style="font-size:0.8em">Here is what has been happening in the last 7 days</span>
+        </div>
+        <div class="container-fluid pb-6 pb-8 pt-3 pt-md-3">
             <!-- Card stats -->
             <div class="row">
                 <div class="col-xl-3 col-lg-6">
-                    <stats-card title="Total traffic"
-                                type="gradient-red"
-                                sub-title="350,897"
-                                icon="ni ni-active-40"
+                    <stats-card title="Total messages sent"
+                                type="purple"
+                                sub-title="5,000"
+                                icon="fa fa-mouse-pointer fa-sm"
                                 class="mb-4 mb-xl-0"
                     >
 
                         <template slot="footer">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                            <span class="text-nowrap">Since last month</span>
+                            <span class="text-info mr-1">See customers</span>
+                            <span>that haven't been sent an invite</span>
                         </template>
                     </stats-card>
                 </div>
                 <div class="col-xl-3 col-lg-6">
-                    <stats-card title="Total traffic"
-                                type="gradient-orange"
-                                sub-title="2,356"
-                                icon="ni ni-chart-pie-35"
+                    <stats-card title="Delivered messages"
+                                type="red"
+                                sub-title="3,000"
+                                icon="fa fa-envelope"
                                 class="mb-4 mb-xl-0"
                     >
 
                         <template slot="footer">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 12.18%</span>
-                            <span class="text-nowrap">Since last month</span>
+                            <span class="text-info mr-1">See customers</span>
+                            <span>that have been sent an invite</span>
                         </template>
                     </stats-card>
                 </div>
                 <div class="col-xl-3 col-lg-6">
-                    <stats-card title="Sales"
-                                type="gradient-green"
-                                sub-title="924"
-                                icon="ni ni-money-coins"
+                    <stats-card title="Failed messages"
+                                type="yellow"
+                                sub-title="1,400"
+                                icon="fa fa-comment-alt"
                                 class="mb-4 mb-xl-0"
                     >
 
                         <template slot="footer">
-                            <span class="text-danger mr-2"><i class="fa fa-arrow-down"></i> 5.72%</span>
-                            <span class="text-nowrap">Since last month</span>
+                            <span class="text-info mr-1">See all customers</span>
+                            <span>that failed to receive the message</span>
                         </template>
                     </stats-card>
 
                 </div>
                 <div class="col-xl-3 col-lg-6">
-                    <stats-card title="Performance"
-                                type="gradient-info"
-                                sub-title="49,65%"
-                                icon="ni ni-chart-bar-32"
+                    <stats-card title="pending messages"
+                                type="teal"
+                                sub-title="600"
+                                icon="fa fa-exclamation-circle"
                                 class="mb-4 mb-xl-0"
                     >
 
                         <template slot="footer">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 54.8%</span>
-                            <span class="text-nowrap">Since last month</span>
+                            <span class="text-info mr-1">See customers</span>
+                            <span>that have pending messages</span>
                         </template>
                     </stats-card>
                 </div>
-            </div>
-        </base-header>
+            </div><!--  end row 1 -->
 
-        <!--Charts-->
-        <div class="container-fluid mt--7">
-            <div class="row">
-                <div class="col-xl-8 mb-5 mb-xl-0">
-                    <card type="default" header-classes="bg-transparent">
-                        <div slot="header" class="row align-items-center">
-                            <div class="col">
-                                <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
-                                <h5 class="h3 text-white mb-0">Sales value</h5>
-                            </div>
-                            <div class="col">
-                                <ul class="nav nav-pills justify-content-end">
-                                    <li class="nav-item mr-2 mr-md-0">
-                                        <a class="nav-link py-2 px-3"
-                                           href="#"
-                                           :class="{active: bigLineChart.activeIndex === 0}"
-                                           @click.prevent="initBigChart(0)">
-                                            <span class="d-none d-md-block">Month</span>
-                                            <span class="d-md-none">M</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-2 px-3"
-                                           href="#"
-                                           :class="{active: bigLineChart.activeIndex === 1}"
-                                           @click.prevent="initBigChart(1)">
-                                            <span class="d-none d-md-block">Week</span>
-                                            <span class="d-md-none">W</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <line-chart
-                                :height="350"
-                                ref="bigChart"
-                                :chart-data="bigLineChart.chartData"
-                                :extra-options="bigLineChart.extraOptions"
-                        >
-                        </line-chart>
+            <div class="row mt-4">
+              <div class="col-xl-3 col-lg-6">
+                <medium-card
+                            icon="ni ni-active-40"
+                            class="mb-4 mb-xl-0"
+                            style="height:300px"
+                >
+                    <template slot="card-content" >
+                        <h3 class="card-title text-black mb-1">CREDIT BALANCE</h3>      
+                        <center>
+                          <div class="icon rounded-circle mt-4 pt-3 shadow d-flex justify-content-center bg-light_blue"
+                              style="width:50px; height:50px">
+                            <i class="fa fa-wallet text-teal"
+                            style="font-size: 1.5em;"></i>
+                          </div>
+                          <br/>
+                          <span class="h1 text-black">200,000</span> <br/>
+                          <span class="h6 text-black mt-3">Available credit balance</span>
+                        </center>
+                    </template>
 
-                    </card>
-                </div>
+                    <template slot="card-button">
+                        <button class="btn btn-info btn-sm" style="width:150px; height:35px; margin-left:7%; margin-top:20px;">Buy Bundles</button>
+                    </template>
 
-                <div class="col-xl-4">
-                    <card header-classes="bg-transparent">
-                        <div slot="header" class="row align-items-center">
-                            <div class="col">
-                                <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
-                                <h5 class="h3 mb-0">Total orders</h5>
-                            </div>
-                        </div>
+                </medium-card>
+              </div>
+            </div> <!-- end row 2 -->
 
-                        <bar-chart
-                                :height="350"
-                                ref="barChart"
-                                :chart-data="redBarChart.chartData"
-                        >
-                        </bar-chart>
-                    </card>
-                </div>
-            </div>
-            <!-- End charts-->
-
-            <!--Tables-->
-            <div class="row mt-5">
-                <div class="col-xl-8 mb-5 mb-xl-0">
-                    <page-visits-table></page-visits-table>
-                </div>
-                <div class="col-xl-4">
-                    <social-traffic-table></social-traffic-table>
-                </div>
-            </div>
-            <!--End tables-->
         </div>
 
     </div>
@@ -144,19 +102,19 @@
 <script>
   // Charts
   import * as chartConfigs from '@/components/Charts/config';
-  import LineChart from '@/components/Charts/LineChart';
-  import BarChart from '@/components/Charts/BarChart';
+  // import LineChart from '@/components/Charts/LineChart';
+  // import BarChart from '@/components/Charts/BarChart';
 
-  // Tables
-  import SocialTrafficTable from './Dashboard/SocialTrafficTable';
-  import PageVisitsTable from './Dashboard/PageVisitsTable';
+  // // Tables
+  // import SocialTrafficTable from './Dashboard/SocialTrafficTable';
+  // import PageVisitsTable from './Dashboard/PageVisitsTable';
 
   export default {
     components: {
-      LineChart,
-      BarChart,
-      PageVisitsTable,
-      SocialTrafficTable,
+      // LineChart,
+      // BarChart,
+      // PageVisitsTable,
+      // SocialTrafficTable,
     },
     data() {
       return {
