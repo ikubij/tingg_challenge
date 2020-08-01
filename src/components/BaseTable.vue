@@ -3,21 +3,61 @@
     <thead :class="theadClasses">
       <tr>
         <slot name="columns" :columns="columns">
-          <th v-for="column in columns" :key="column">{{ column }}</th>
+          <th v-for="column in columns" :key="column.title">
+            <div class="row ">
+              <span> {{ column.name }} </span>
+
+              <div v-if="column.sortable" class="ml-3">
+                <div class="row">
+                  <i class="fa fa-caret-up"></i>
+                </div>
+                <div class="row mt--1">
+                  <i class="fa fa-caret-down"></i>
+                </div>
+              </div>
+            </div>
+          </th>
         </slot>
       </tr>
     </thead>
+
     <tbody :class="tbodyClasses">
-      <tr v-for="(item, index) in data" :key="index">
-        <slot :row="item" :index="index">
-          <td
+      <tr v-for="(row, index) in data" :key="index">
+
+        <!-- <slot :row="item" :index="index"> -->
+          <!-- <td
             v-for="(column, index) in colsWithValue(item)"
             :key="index">
             {{ itemValue(item, column) }}
+          </td> -->
+
+          <td v-for="(item, index) in row" :key="index">
+            <span v-html="item"></span>
           </td>
-        </slot>
       </tr>
     </tbody>
+      
+    <!-- <tfoot colspan="5" >
+      <tr>
+        <slot name="columns" :columns="columns">
+          <th v-for="column in columns" :key="column.title">
+            <div class="row ">
+              <span> {{ column.name }} </span>
+
+              <div v-if="column.sortable" class="ml-3">
+                <div class="row">
+                  <i class="fa fa-caret-up"></i>
+                </div>
+                <div class="row mt--1">
+                  <i class="fa fa-caret-down"></i>
+                </div>
+              </div>
+            </div>
+          </th>
+        </slot>
+      </tr>
+    </tfoot> -->
+
   </table>
 </template>
 <script>
@@ -70,4 +110,6 @@ export default {
   }
 };
 </script>
-<style></style>
+<style scoped lang="scss">
+// thead tr { position: sticky; top: 0; }
+</style>
