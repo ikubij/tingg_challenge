@@ -52,7 +52,8 @@ function chartOptions(Chart) {
           position: 'bottom',
           labels: {
             usePointStyle: true,
-            padding: 16
+            padding: 16,
+            boxWidth:8
           }
         },
         elements: {
@@ -105,18 +106,18 @@ function chartOptions(Chart) {
 
   // yAxes
   Chart.scaleService.updateScaleDefaults('linear', {
-    gridLines: {
-      borderDash: [2],
-      borderDashOffset: [2],
-      color: (mode == 'dark') ? colors.gray[900] : colors.gray[300],
-      drawBorder: false,
-      drawTicks: false,
-      lineWidth: 0,
-      zeroLineWidth: 0,
-      zeroLineColor: (mode == 'dark') ? colors.gray[900] : colors.gray[300],
-      zeroLineBorderDash: [2],
-      zeroLineBorderDashOffset: [2]
-    },
+    // gridLines: {
+    //   borderDash: [2],
+    //   borderDashOffset: [2],
+    //   color: (mode == 'dark') ? colors.gray[900] : colors.gray[300],
+    //   drawBorder: false,
+    //   drawTicks: false,
+    //   lineWidth: 0,
+    //   zeroLineWidth: 0,
+    //   zeroLineColor: (mode == 'dark') ? colors.gray[900] : colors.gray[300],
+    //   zeroLineBorderDash: [2],
+    //   zeroLineBorderDashOffset: [2]
+    // },
     ticks: {
       beginAtZero: true,
       padding: 10,
@@ -491,6 +492,67 @@ export let barChartOptions = {
         ticks: {
           padding: 20,
           fontColor: '#9e9e9e'
+        }
+      }
+    ]
+  }
+};
+
+
+export let stackedChartOptions = {
+  // ...basicOptions,
+  maintainAspectRatio: false,
+  responsive: true,
+  legend: {
+    display: true,
+    align:'start',
+    reverse:true,
+    lineDashOffset: 2,
+    labels:{
+      // padding:10
+    }
+  },
+  tooltips: {
+    backgroundColor: '#f5f5f5',
+    titleFontColor: '#333',
+    bodyFontColor: '#666',
+    bodySpacing: 4,
+    xPadding: 12,
+    mode: 'nearest',
+    intersect: 0,
+    position: 'nearest'
+  },
+  scales: {
+    yAxes: [
+      {
+        stacked: true,
+        gridLines: {
+          drawBorder: false,
+          color: 'rgba(29,140,248,0.7)',
+          // zeroLineColor: 'transparent',
+          borderDash: [1, 4],
+        },
+        ticks: {
+          suggestedMin: 60,
+          suggestedMax: 5000,
+          padding: 20,
+          fontColor: '#9e9e9e'
+        }
+      }
+    ],
+    xAxes: [
+      {
+        stacked: true,
+        gridLines: {
+          // display: false,
+          // drawBorder: false,
+          // // zeroLineColor: 'transparent',
+          // zeroLineColor:"rgba(29,140,248,0.1)",
+          // borderDash: [1, 1],
+        },
+        ticks: {
+          padding: 20,
+          fontColor: '#9e9e9e',
         }
       }
     ]
