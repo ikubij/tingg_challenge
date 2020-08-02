@@ -9,7 +9,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: 'dashboard',
+      redirect: 'login',
       component: DashboardLayout,
       children: [
         {
@@ -31,25 +31,22 @@ export default new Router({
           component: () => import(/* webpackChunkName: "demo" */ './views/Messages.vue')
         },
         {
-          path: '/icons',
-          name: 'icons',
-          component: () => import(/* webpackChunkName: "demo" */ './views/Icons.vue')
+          path: '/accounts',
+          component: () => import(/* webpackChunkName: "demo" */ './views/ComingSoon.vue')
         },
         {
-          path: '/profile',
-          name: 'profile',
-          component: () => import(/* webpackChunkName: "demo" */ './views/UserProfile.vue')
+          path: '/credits',
+          component: () => import(/* webpackChunkName: "demo" */ './views/ComingSoon.vue')
         },
         {
-          path: '/maps',
-          name: 'maps',
-          component: () => import(/* webpackChunkName: "demo" */ './views/Maps.vue')
+          path: '/reports',
+          component: () => import(/* webpackChunkName: "demo" */ './views/ComingSoon.vue')
         },
         {
-          path: '/tables',
-          name: 'tables',
-          component: () => import(/* webpackChunkName: "demo" */ './views/Tables.vue')
-        }
+          path: '/contact_us',
+          component: () => import(/* webpackChunkName: "demo" */ './views/ComingSoon.vue')
+        },
+
       ]
     },
     {

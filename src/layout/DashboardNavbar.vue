@@ -146,7 +146,9 @@
 
             <li class="nav-item">          
                 <a href="#">
-                  <span  class="text-teal"> Log out </span>
+                  <router-link to="/login">
+                    <span  class="text-teal"> Log out </span>
+                  </router-link>
                   <i class="fa fa-power-off fa-lg text-gray" style="transform: rotate(90deg);"></i>
                 </a>
             </li>

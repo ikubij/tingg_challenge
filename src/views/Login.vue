@@ -37,7 +37,10 @@
                                 <span class="text-muted">Remember me</span>
                             </base-checkbox>
                             <div class="text-center">
-                                <base-button type="primary" class="my-4">Sign in</base-button>
+                                <!-- <base-button type="primary" class="my-4">Sign in</base-button> -->
+                                <router-link tag="base-button" type="primary" class="my-4" to="/dashboard">
+                                    <span class="nav-link-inner--text">Sign in</span>
+                                </router-link>
                             </div>
                         </form>
                     </div>

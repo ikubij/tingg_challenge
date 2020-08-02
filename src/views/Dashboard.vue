@@ -10,7 +10,7 @@
                 <div class="col-xl-3 col-lg-6">
                     <stats-card title="Total messages sent"
                                 type="purple"
-                                sub-title="5,000"
+                                :sub-title="messagesSent"
                                 icon="fa fa-mouse-pointer fa-sm"
                                 class="mb-4 mb-xl-0"
                     >
@@ -24,7 +24,7 @@
                 <div class="col-xl-3 col-lg-6">
                     <stats-card title="Delivered messages"
                                 type="red"
-                                sub-title="3,000"
+                                :sub-title="messagesDelivered"
                                 icon="fa fa-envelope"
                                 class="mb-4 mb-xl-0"
                     >
@@ -38,7 +38,7 @@
                 <div class="col-xl-3 col-lg-6">
                     <stats-card title="Failed messages"
                                 type="yellow"
-                                sub-title="1,400"
+                                :sub-title="messagesFailed"
                                 icon="fa fa-comment-alt"
                                 class="mb-4 mb-xl-0"
                     >
@@ -53,7 +53,7 @@
                 <div class="col-xl-3 col-lg-6">
                     <stats-card title="pending messages"
                                 type="teal"
-                                sub-title="600"
+                                :sub-title="messagesPending"
                                 icon="fa fa-exclamation-circle"
                                 class="mb-4 mb-xl-0"
                     >
@@ -88,7 +88,14 @@
                     </template>
 
                     <template slot="card-button">
-                        <button class="btn btn-info btn-sm" style="width:150px; height:35px; margin-left:7%; margin-top:20px;">Buy Bundles</button>
+                        <!-- <button class="btn btn-info btn-sm" style="width:150px; height:35px; margin-left:7%; margin-top:20px;">Buy Bundles</button> -->
+                        <router-link
+                          class="btn btn-info btn-sm"
+                          style="width:150px; height:35px; margin-left:7%; margin-top:20px;"
+                          to="credits"
+                        >Buy Bundles
+                        </router-link>
+                        
                     </template>
 
                 </medium-card>
@@ -102,14 +109,14 @@
                       <span class="text-dark h5">REPORTS</span>
                       <span class="text-teal h5">Total SMS sent per transactions</span>
                       
-                      <div class="dropdown">
+                      <div class="btn-group">
                         <button class="btn btn-sm btn-light_blue dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="fa fa-calendar text-info"></i> Month
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="#">Day</a>
+                          <a class="dropdown-item" href="#">Week</a>
+                          <a class="dropdown-item" href="#">Year</a>
                         </div>
                       </div>
                     </div>
@@ -134,34 +141,18 @@
 <script>
   // Charts
   import * as chartConfigs from '@/components/Charts/config';
-  // import LineChart from '@/components/Charts/LineChart';
   import BarChart from '@/components/Charts/BarChart';
-
-  // // Tables
-  // import SocialTrafficTable from './Dashboard/SocialTrafficTable';
-  // import PageVisitsTable from './Dashboard/PageVisitsTable';
 
   export default {
     components: {
-      // LineChart,
       BarChart,
-      // PageVisitsTable,
-      // SocialTrafficTable,
     },
     data() {
       return {
-        // bigLineChart: {
-        //   allData: [
-        //     [0, 20, 10, 30, 15, 40, 20, 60, 60],
-        //     [0, 20, 5, 25, 10, 30, 15, 40, 40]
-        //   ],
-        //   activeIndex: 0,
-        //   chartData: {
-        //     datasets: [],
-        //     labels: [],
-        //   },
-        //   extraOptions: chartConfigs.blueChartOptions,
-        // },
+        messagesSent: "5,000",
+        messagesDelivered: '3,000',
+        messagesFailed: '1,400',
+        messagesPending: '600',
         tinggBarChart: {
           chartData: {
             // labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -202,24 +193,6 @@
 
         }
       };
-    },
-    methods: {
-      // initBigChart(index) {
-      //   let chartData = {
-      //     datasets: [
-      //       {
-      //         label: 'Performance',
-      //         data: this.bigLineChart.allData[index]
-      //       }
-      //     ],
-      //     labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      //   };
-      //   this.bigLineChart.chartData = chartData;
-      //   this.bigLineChart.activeIndex = index;
-      // }
-    },
-    mounted() {
-      // this.initBigChart(0);
     }
   };
 </script>

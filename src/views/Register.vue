@@ -54,7 +54,10 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <base-button type="primary" class="my-4">Create account</base-button>
+                            <!-- <base-button type="primary" class="my-4">Create account</base-button> -->
+                            <router-link tag="base-button" type="primary" class="my-4" to="/dashboard">
+                                <span class="nav-link-inner--text">Create account</span>
+                            </router-link>
                         </div>
                     </form>
                 </div>

@@ -11,14 +11,20 @@
                     <large-card title="Total traffic"
                                 sub-title="Start sending tailored messsages to your customers"
                                 icon="ni ni-active-40"
-                                illustration="img/illustrations/chat.png"
+                                illustration="img/illustrations/chat.svg"
                                 class="mb-4 mb-xl-0"
                                 style="height:250px"
                     >
 
                         <template slot="card-button" >
                             <br/><br/>
-                            <button class="btn btn-info btn-sm" style="width:150px; height:35px;">Send your first SMS</button>
+                            <!-- <button class="btn btn-info btn-sm" style="width:150px; height:35px;">Send your first SMS</button> -->
+                            <router-link
+                              class="btn btn-info btn-sm"
+                              style="width:150px; height:35px;"
+                              to="messages"
+                            >Send your first SMS
+                            </router-link>
 
                         </template>
 
@@ -33,13 +39,19 @@
                         <template slot="card-content" >
                             <h3 class="card-title text-black mb-1">Add Contacts lists</h3>      
                             <center>
-                              <img src="img/illustrations/podcast.png" style="width:auto; height:100px"/> <br/>
+                              <img src="img/illustrations/podcast.svg" style="width:auto; height:100px"/> <br/>
                             </center>
                             <span class="h6 text-black mb-0">Easily add contact lists or groups and start sending messages to your customers</span>
                         </template>
 
                         <template slot="card-button">
-                            <button class="btn btn-info btn-sm" style="width:150px; height:35px; margin-left:20%; margin-top:5px;">Add Contacts lists</button>
+                            <!-- <button class="btn btn-info btn-sm" style="width:150px; height:35px; margin-left:20%; margin-top:5px;">Add Contacts lists</button> -->
+                            <router-link
+                              class="btn btn-info btn-sm"
+                              style="width:150px; height:35px; margin-left:20%; margin-top:5px;"
+                              to="accounts"
+                            >Add Contacts lists
+                            </router-link>
                         </template>
 
                     </medium-card>
@@ -53,14 +65,20 @@
                     <large-card title="Top Up Credit"
                                 sub-title="Easily topup your credit bundle balance and start sending messages to your customers"
                                 icon="ni ni-active-40"
-                                illustration="img/illustrations/credit_card.png"
+                                illustration="img/illustrations/credit_card.svg"
                                 class="mb-4 mb-xl-0"
                                 style="height:190px"
                     >
 
                         <template slot="card-button" >
                             <br/>
-                            <button class="btn btn-info btn-sm" style="width:150px; height:35px;">Topup credit</button>
+                            <!-- <button class="btn btn-info btn-sm" style="width:150px; height:35px;">Topup credit</button> -->
+                            <router-link
+                              class="btn btn-info btn-sm mt-md-4 "
+                              style="width:150px; height:35px; "
+                              to="credits"
+                            >Topup credit
+                            </router-link>
 
                         </template>
 
@@ -81,7 +99,13 @@
                         </template>
 
                         <template slot="card-button">
-                            <button class="btn btn-info btn-sm" style="width:150px; height:35px; margin-left:20%; margin-top:5px;">Buy bundles</button>
+                            <!-- <button class="btn btn-info btn-sm" style="width:150px; height:35px; margin-left:20%; margin-top:5px;">Buy bundles</button> -->
+                            <router-link
+                              class="btn btn-info btn-sm "
+                              style="width:150px; height:35px; margin-left:20%; margin-top:5px;"
+                              to="credits"
+                            >Buy bundles
+                            </router-link>
                         </template>
 
                     </medium-card>
@@ -97,20 +121,8 @@
 <script>
   // Charts
   import * as chartConfigs from '@/components/Charts/config';
-  // import LineChart from '@/components/Charts/LineChart';
-  // import BarChart from '@/components/Charts/BarChart';
-
-  // // Tables
-  // import SocialTrafficTable from './Dashboard/SocialTrafficTable';
-  // import PageVisitsTable from './Dashboard/PageVisitsTable';
 
   export default {
-    components: {
-      // LineChart,
-      // BarChart,
-      // PageVisitsTable,
-      // SocialTrafficTable,
-    },
     data() {
       return {
         bigLineChart: {

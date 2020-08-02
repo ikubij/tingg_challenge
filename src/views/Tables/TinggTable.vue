@@ -8,7 +8,10 @@
                   :thead-classes="type === 'dark' ? 'thead-dark': 'thead-light'"
                   tbody-classes="list"
                   :data="data"
-                  :columns="columns">
+                  :columns="columns"
+                  :showRows="parseInt(selectedEntries)"
+                  :startShowingAt="startShowingAt"
+                  >
                   
       </base-table>
     </div>
@@ -18,7 +21,7 @@
 
       <span class="mr-1"> Show Rows: </span>
       <select class="rounded border-0 pt-1 shadow d-flex justify-content-center bg-lighter"
-          style="width:50px; height:25px ">
+          style="width:50px; height:25px " v-model="selectedEntries">
         <option>25</option>
         <option>50</option>
         <option>100</option>
@@ -31,7 +34,7 @@
       <input class="rounded border-0  shadow d-flex justify-content-center bg-lighter"
         style="width:50px; height:25px border:0" value="100 |"/>
       
-      <span class="mr-1 ml-4">  1 - 25 of 522</span>
+      <span class="mr-1 ml-4">  1 - {{selectedEntries}} of 522</span>
 
       <div class="ml-3 rounded pt-1 shadow d-flex justify-content-center bg-lighter"
         style="width:30px; height:30px">
@@ -54,6 +57,7 @@
         type: String
       },
       title: String,
+      showRows: Number,
       columns: {
         type: Array,
         default: () => [],
@@ -67,6 +71,8 @@
     },
     data() {
       return {
+        startShowingAt:0,
+        selectedEntries:this.showRows,
         tableData: [
           {
             img: 'img/theme/bootstrap.jpg',
@@ -110,7 +116,12 @@
           }
         ]
       }
-    }
+    },//end data
+    // watch:{
+    //   selectedEntries: function (val) {
+    //     this.showRows = val;
+    //   },
+    // }
   }
 </script>
 <style>
