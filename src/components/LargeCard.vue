@@ -15,7 +15,7 @@
 
       <div class="col-6" v-if="$slots.illustration || illustration">
         <slot name="illustration">
-          <img :src="illustration" style="width:inherit; height:75%"/>
+          <img :src="illustration" style="width:inherit; height:150px;"/>
         </slot>
       </div>
 
